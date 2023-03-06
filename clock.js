@@ -1,7 +1,7 @@
 let num = 0;
 let num2 = 0;
 let num3 = 0;
-const miliSecTime = document.getElementById('mili-sec');
+const mSecTime = document.getElementById('mSec');
 const secTime = document.getElementById('sec');
 const minTime = document.getElementById('min');
 
@@ -10,16 +10,16 @@ let interval;
 function startTimer() {
     num++;
     if (num < 10) {
-        miliSecTime.innerText = "0" + num;
+        mSecTime.innerText = "0" + num;
     }
     if (num > 10) {
-        miliSecTime.innerText = num;
+        mSecTime.innerText = num;
     }
     if (num == 100) {
         num = 0;
         num2++;
         secTime.innerText = "0" + num2;
-        miliSecTime.innerText = "0" + 0;
+        mSecTime.innerText = "0" + 0;
     }
     if (num2 > 9) {
         secTime.innerText = num2;
@@ -54,7 +54,7 @@ document.getElementById('reset').addEventListener('click', function () {
     num = "00";
     num2 = "00";
     num3 = "00";
-    miliSecTime.innerText = num;
+    mSecTime.innerText = num;
     secTime.innerText = num2;
     minTime.innerText = num3;
 })
